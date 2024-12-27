@@ -24,3 +24,11 @@ func createUser(name string, age int) User {
 func getUsers() []User {
     return users
 }
+func getUserByID(id int) (User, bool) {
+    for _, user := range users {
+        if user.ID == id {
+            return user, true
+        }
+    }
+    return User{}, false
+}
