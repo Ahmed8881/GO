@@ -24,11 +24,13 @@ func createUser(name string, age int) User {
 func getUsers() []User {
     return users
 }
-func getUserByID(id int) (User, bool) {
-    for _, user := range users {
+func updateUser(id int, name string, age int) bool {
+    for i, user := range users {
         if user.ID == id {
-            return user, true
+            users[i].Name = name
+            users[i].Age = age
+            return true
         }
     }
-    return User{}, false
+    return false
 }
