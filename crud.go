@@ -9,3 +9,4 @@ type User struct {
 	Name string
 	Age int
 }
+var users []User
