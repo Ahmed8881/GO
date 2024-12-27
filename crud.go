@@ -21,3 +21,6 @@ func createUser(name string, age int) User {
     nextID++
     return user
 }
+func getUsers() []User {
+    return users
+}
