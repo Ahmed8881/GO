@@ -34,12 +34,3 @@ func updateUser(id int, name string, age int) bool {
     }
     return false
 }
-func deleteUser(id int) bool {
-    for i, user := range users {
-        if user.ID == id {
-            users = append(users[:i], users[i+1:]...)
-            return true
-        }
-    }
-    return false
-}
